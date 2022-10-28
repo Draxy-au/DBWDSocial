@@ -1,0 +1,12 @@
+app {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+
+  .feed {
+    flex: 6;
+  }
+}

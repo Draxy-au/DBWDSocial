@@ -13,7 +13,6 @@
     min-height: 600px;
     display: flex;
     flex-direction: row;
-    gap: 30px;
     color: white;
     overflow: hidden;
 
@@ -27,6 +26,7 @@
       padding: 50px;
       gap:30px;
       color: white;
+      justify-content: center;
 
       h1 {
         font-size: 100px;
@@ -34,7 +34,9 @@
         margin: 0;
       }
 
-      p {}
+      p {
+        font-size: 16px;
+      }
 
       span {
         font-size: 14px;

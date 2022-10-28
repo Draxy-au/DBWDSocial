@@ -1,10 +1,27 @@
+import { useNavigate } from "react-router-dom";
+
 import "./register.scss";
 
 const Register = () => {
+  const navigate = useNavigate();
+
+
+  const handleLoginClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    navigate("/login")
+  }
+
   return (
     <div className='register'>
       <div className="card">
+        
         <div className="left">
+          <h1>Social Book.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum vitae sequi pariatur consectetur, nulla ullam omnis suscipit.</p>
+          <span>Already have an account?</span>
+          <button onClick={handleLoginClick}>Login</button>
+        </div>
+        <div className="right">
           <h1>Register</h1>
           <form>
             <input type="text" name="username" id="username" placeholder="Username..." />
@@ -13,12 +30,6 @@ const Register = () => {
             <input type="text" name="fullName" id="fullName" placeholder="Full Name..." />
             <button>Register</button>
           </form>
-        </div>
-        <div className="left">
-          <h1>DBWD Social</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nisi provident labore ex veritatis?</p>
-          <p>Already have an account?</p>
-          <button>Login</button>
         </div>
       </div>
     </div>

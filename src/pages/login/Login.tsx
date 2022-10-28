@@ -1,14 +1,24 @@
+import { useNavigate } from "react-router-dom";
+
 import "./login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+
+  const handleRegisterClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    navigate("/register")
+  }
+
   return (
     <div className='login'>
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>Social Book.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum vitae sequi pariatur consectetur, nulla ullam omnis suscipit. </p>
           <span>Don't have an account?</span>
-          <button>Register</button>
+          <button onClick={handleRegisterClick}>Register</button>
         </div>
         <div className="right">
           <h1>Login</h1>
